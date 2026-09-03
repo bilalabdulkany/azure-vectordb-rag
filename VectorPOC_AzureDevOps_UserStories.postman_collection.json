@@ -1,0 +1,643 @@
+{
+  "info": {
+    "_postman_id": "9c1f1d7d-9f6d-4f9d-8d77-vectorpoc-azuredevops",
+    "name": "VectorPOC - Azure DevOps User Stories",
+    "description": "Creates 15 sample User Stories in the VectorPOC Azure DevOps project for RAG/ChromaDB testing.",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "auth": {
+    "type": "basic",
+    "basic": [
+      {
+        "key": "username",
+        "value": "{{azure_username}}",
+        "type": "string"
+      },
+      {
+        "key": "password",
+        "value": "{{azure_pat}}",
+        "type": "string"
+      }
+    ]
+  },
+  "variable": [
+    {
+      "key": "organization",
+      "value": "olakara"
+    },
+    {
+      "key": "project",
+      "value": "VectorPOC"
+    },
+    {
+      "key": "azure_username",
+      "value": "pat"
+    },
+    {
+      "key": "azure_pat",
+      "value": ""
+    }
+  ],
+  "item": [
+    {
+      "name": "Create - Display New Employee Form",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Display New Employee Form\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to open the New Employee Form by clicking the New button, so that I can enter details for a new employee.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The New button is visible on the Employee List page.</li><li>Clicking New opens the New Employee Form.</li><li>The form contains fields for employee information.</li><li>The user can cancel and return to the Employee List.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Display New Employee Form"
+      }
+    },
+    {
+      "name": "Create - Enter Employee Personal Information",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Enter Employee Personal Information\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to enter an employee's personal information, so that the employee record contains the required personal details.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The form allows entry of first name and last name.</li><li>The form allows entry of date of birth.</li><li>The form allows entry of gender.</li><li>Required fields must be completed before saving.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Enter Employee Personal Information"
+      }
+    },
+    {
+      "name": "Create - Enter Employee Contact Information",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Enter Employee Contact Information\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to enter the employee's contact information, so that the organization can contact the employee.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The user can enter an email address.</li><li>The user can enter a phone number.</li><li>The user can enter a residential address.</li><li>Email format must be validated.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Enter Employee Contact Information"
+      }
+    },
+    {
+      "name": "Create - Validate Employee Information",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Validate Employee Information\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want the system to validate employee information before saving, so that invalid employee records are not created.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>Required fields are validated.</li><li>Email addresses are validated.</li><li>Invalid dates are rejected.</li><li>Validation errors are displayed next to the relevant fields.</li><li>The employee cannot be saved while validation errors exist.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Validate Employee Information"
+      }
+    },
+    {
+      "name": "Create - Save New Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Save New Employee\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to save a completed employee form, so that a new employee record is created in the system.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The employee information is validated before saving.</li><li>A unique employee ID is generated.</li><li>The employee record is persisted.</li><li>A successful save message is displayed.</li><li>The user is returned to the Employee List.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Save New Employee"
+      }
+    },
+    {
+      "name": "Create - Generate Employee Number",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Generate Employee Number\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want the system to automatically generate a unique employee number, so that every employee can be uniquely identified.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The employee number is generated when the employee is saved.</li><li>Employee numbers must be unique.</li><li>The user cannot manually enter an employee number.</li><li>The generated number is displayed after saving.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Generate Employee Number"
+      }
+    },
+    {
+      "name": "Create - Edit Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Edit Employee\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to edit an existing employee record, so that employee information can be kept up to date.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The user can select an employee from the Employee List.</li><li>Existing employee information is displayed.</li><li>The user can modify editable fields.</li><li>Changes are validated before saving.</li><li>Updated information is persisted.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Edit Employee"
+      }
+    },
+    {
+      "name": "Create - Search Employees",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Search Employees\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to search for employees by employee number or name, so that I can quickly find an employee record.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The user can search by employee number.</li><li>The user can search by first name.</li><li>The user can search by last name.</li><li>Search results display matching employees.</li><li>The search supports partial names.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Search Employees"
+      }
+    },
+    {
+      "name": "Create - View Employee Details",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"View Employee Details\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to view an employee's details, so that I can review the information stored for that employee.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The user can select an employee from search results.</li><li>Employee personal information is displayed.</li><li>Employee contact information is displayed.</li><li>Employee employment information is displayed.</li><li>The information is read-only unless the user chooses Edit.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: View Employee Details"
+      }
+    },
+    {
+      "name": "Create - Deactivate Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Deactivate Employee\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR administrator, I want to deactivate an employee, so that employees who are no longer active cannot be treated as current employees.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>An administrator can deactivate an employee.</li><li>The system asks for confirmation.</li><li>Deactivated employees cannot be selected as active employees.</li><li>The employee record remains available for historical purposes.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Deactivate Employee"
+      }
+    },
+    {
+      "name": "Create - Prevent Duplicate Employee",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Prevent Duplicate Employee\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want the system to detect potential duplicate employees, so that duplicate employee records are not created.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The system checks existing employees before saving.</li><li>Matching employee numbers cannot be duplicated.</li><li>Potential duplicate names and dates of birth are flagged.</li><li>The user receives an appropriate warning.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Prevent Duplicate Employee"
+      }
+    },
+    {
+      "name": "Create - Assign Employee Department",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Assign Employee Department\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to assign an employee to a department, so that the employee is associated with the correct organizational unit.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The department can be selected from a list.</li><li>Only active departments can be selected.</li><li>The selected department is stored with the employee.</li><li>The department is displayed on the employee details page.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Assign Employee Department"
+      }
+    },
+    {
+      "name": "Create - Assign Employee Manager",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Assign Employee Manager\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to assign a manager to an employee, so that the reporting relationship is recorded.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The user can select an active employee as manager.</li><li>An employee cannot be assigned as their own manager.</li><li>The manager relationship is persisted.</li><li>The manager is displayed on the employee details page.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Assign Employee Manager"
+      }
+    },
+    {
+      "name": "Create - View Employee Audit History",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"View Employee Audit History\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR administrator, I want to view changes made to an employee record, so that I can understand how employee information has changed over time.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>Changes to employee information are recorded.</li><li>The history contains the date and time of the change.</li><li>The history identifies the user who made the change.</li><li>Previous and new values are available for relevant fields.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: View Employee Audit History"
+      }
+    },
+    {
+      "name": "Create - Export Employee List",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json-patch+json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "[\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Title\",\n    \"value\": \"Export Employee List\"\n  },\n  {\n    \"op\": \"add\",\n    \"path\": \"/fields/System.Description\",\n    \"value\": \"<p>As a HR user, I want to export the employee list, so that I can use employee information for reporting and analysis.</p><p><strong>Acceptance Criteria:</strong></p><ul><li>The user can export the current employee list.</li><li>The export contains employee number and name.</li><li>The export contains department and employment status.</li><li>The exported file can be opened in a spreadsheet application.</li></ul>\"\n  }\n]"
+        },
+        "url": {
+          "raw": "https://dev.azure.com/{{organization}}/{{project}}/_apis/wit/workitems/$User%20Story?api-version=7.1",
+          "protocol": "https",
+          "host": [
+            "dev",
+            "azure",
+            "com"
+          ],
+          "path": [
+            "{{organization}}",
+            "{{project}}",
+            "_apis",
+            "wit",
+            "workitems",
+            "$User%20Story"
+          ],
+          "query": [
+            {
+              "key": "api-version",
+              "value": "7.1"
+            }
+          ]
+        },
+        "description": "Creates the User Story: Export Employee List"
+      }
+    }
+  ]
+}
